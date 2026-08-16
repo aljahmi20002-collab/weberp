@@ -458,7 +458,7 @@ root.
 
 ## 📝 License & Credits
 
-Originally developed by **wemaxdevs** and released under the MIT license (see
+Originally developed by **NebrasERP** and released under the MIT license (see
 `composer.json`). This repository is a redistribution / extended copy — see the
 Git history for full contributors.
 
