@@ -1,0 +1,17 @@
+.overlayer{
+    display: none!important;
+}
+.loader{
+    display: none!important;
+}
+hr{
+    background-color: black!important;
+} 
+#sale_print{
+    display: none!important;
+}
+@media print {
+    #sale_print{
+        display: block!important;
+    }
+}

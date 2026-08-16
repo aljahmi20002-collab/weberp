@@ -1,0 +1,27 @@
+.custom-table td{
+    padding:2px 5px!important
+}
+.btn-primary{
+    background-color: #7367f0!important;
+    border:1px solid #7367f0!important
+}
+.text-primary{
+    color: #7367f0!important;
+}
+.btn-primary:hover{
+    background-color: unset!important;
+    border:1px solid #7367f0!important;
+    color:#7367f0!important;
+}
+.btn-danger{
+    background-color: #dc3545!important;
+    border:1px solid #dc3545!important
+}
+.btn-danger:hover{
+    background-color: unset!important;
+    border:1px solid #dc3545!important;
+    color:#dc3545!important;
+}
+body{
+    font-size: 12px!important;
+}

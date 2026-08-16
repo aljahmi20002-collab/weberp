@@ -1,0 +1,32 @@
+.leaveinfo{
+    background: #eceff4;
+    padding: .5rem;
+    overflow:hidden
+}
+
+.leave-type .weekend_check_input{
+    width: unset!important;
+}
+
+.leave-type div.radio.float-left{
+    float: left!important;
+    margin-right:30px;
+}
+
+.check-theme.dark-theme .leaveinfo,.check-theme.dark-theme h5{
+    background: unset!important;
+
+}
+
+.check-theme.dark-theme .leaveinfo .form-control:disabled, .check-theme.dark-theme .form-control[readonly]{
+        background-color: transparent;
+        color: white;
+}
+
+.check-theme.dark-theme .leaveinfo{
+    background: #ffffff17!important;
+}
+
+.print-btn{
+    min-width: 5px!important;
+}

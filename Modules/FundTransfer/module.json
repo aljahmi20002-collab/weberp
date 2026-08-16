@@ -1,0 +1,11 @@
+{
+    "name": "FundTransfer",
+    "alias": "fundtransfer",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FundTransfer\\Providers\\FundTransferServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "DutySchedule",
+    "alias": "dutyschedule",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DutySchedule\\Providers\\DutyScheduleServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,22 @@
+.bg--body {
+	background-color: var(--body-bg) !important;
+}
+.bg--section {
+	background-color: var(--section-bg) !important;
+}
+.text-dark {
+	color: var(--title-clr) !important;
+}
+.text--base {
+	color: var(--base-clr) !important;
+}
+a {
+	text-decoration: none;
+}
+*[class*="border"]:not(.spinner-border) {
+	border-color: var(--border-clr) !important;
+}
+.badge {
+	padding: 8px 15px 7px;
+	@include border-radius(13px);
+}

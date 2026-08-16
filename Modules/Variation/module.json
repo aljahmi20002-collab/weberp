@@ -1,0 +1,11 @@
+{
+    "name": "Variation",
+    "alias": "variation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Variation\\Providers\\VariationServiceProvider"
+    ],
+    "files": []
+}

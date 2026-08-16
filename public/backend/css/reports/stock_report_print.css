@@ -1,0 +1,32 @@
+ 
+@media print{
+    body{
+        background: white!important;
+    } 
+
+    div{
+        font-size: 15px!important;
+    }
+
+    .dashboard--widget{
+        padding:5px 10px!important;
+        box-shadow: none!important;
+    }
+    .col-lg-3.mt-3{
+        margin-top: 0px!important;
+    }
+    .grossprofitfont,.netprofitfont{
+        float: right!important;
+    }
+    .print_break{
+        display: block!important;
+    }
+    .filter_row{
+        display: block!important;
+    }
+
+}
+ 
+.stock_report_print{
+    display: block!important;
+} 

@@ -1,0 +1,11 @@
+{
+    "name": "TaxRate",
+    "alias": "taxrate",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TaxRate\\Providers\\TaxRateServiceProvider"
+    ],
+    "files": []
+}

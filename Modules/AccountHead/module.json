@@ -1,0 +1,11 @@
+{
+    "name": "AccountHead",
+    "alias": "accounthead",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AccountHead\\Providers\\AccountHeadServiceProvider"
+    ],
+    "files": []
+}

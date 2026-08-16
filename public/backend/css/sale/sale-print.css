@@ -1,0 +1,56 @@
+
+
+.overlayer{
+    display: none!important;
+}
+.loader{
+    display: none!important;
+}
+hr{
+    background-color: black!important;
+} 
+.pos-user-panel{
+    background: white!important;
+}
+.text-right{
+    text-align: right!important;
+}
+
+@media print { 
+    .print-row{
+        display: none!important;
+    }
+
+    *{
+        font-size: 15px!important;
+        color: #2a3142!important;
+    }
+    #pos_main{
+        display: none;
+    } 
+ 
+    #sale_print{
+        display: block !important;
+    }
+    hr{
+        background-color: black!important;
+    }
+    .text-right{
+        text-align: right!important;
+    }
+    .print-info p{
+        line-height:1.5!important; 
+    }
+    .invoice_no{
+        font-size: 18px!important;
+    }
+    .barcode{
+        transform: scale(0.8)!important;
+    } 
+
+    table tr td{
+        padding: 5px 5px!important;
+        line-height: 1.3!important; 
+    }
+} 
+

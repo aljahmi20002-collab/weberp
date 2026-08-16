@@ -1,0 +1,11 @@
+{
+    "name": "LeaveAssign",
+    "alias": "leaveassign",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LeaveAssign\\Providers\\LeaveAssignServiceProvider"
+    ],
+    "files": []
+}

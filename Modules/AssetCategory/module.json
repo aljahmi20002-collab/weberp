@@ -1,0 +1,11 @@
+{
+    "name": "AssetCategory",
+    "alias": "assetcategory",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AssetCategory\\Providers\\AssetCategoryServiceProvider"
+    ],
+    "files": []
+}

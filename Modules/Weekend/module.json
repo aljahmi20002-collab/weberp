@@ -1,0 +1,11 @@
+{
+    "name": "Weekend",
+    "alias": "weekend",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Weekend\\Providers\\WeekendServiceProvider"
+    ],
+    "files": []
+}

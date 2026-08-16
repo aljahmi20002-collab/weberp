@@ -1,0 +1,11 @@
+{
+    "name": "BulkImport",
+    "alias": "bulkimport",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BulkImport\\Providers\\BulkImportServiceProvider"
+    ],
+    "files": []
+}
