@@ -1,7 +1,7 @@
 <div role="tabpanel" class="tab-pane active" id="welcome-setup-tab">
     <div class="section"> 
         <div class="form-group clearfix">
-            <h3 class="title text-center">Welcome to the setup WeERP - Business or company management solution with POS (SaaS)</h3>
+            <h3 class="title text-center">Welcome to WebERP / WebPOS Setup — Business & Company Management Solution with POS (SaaS)</h3>
         </div>
     </div>
     <div class="text-center mt-5">

@@ -106,7 +106,7 @@ class LanguageController extends Controller
     //language store
     public function store(StoreRequest $request){
 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -128,7 +128,7 @@ class LanguageController extends Controller
     //language update
     public function update(UpdateRequest $request){
 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -155,7 +155,7 @@ class LanguageController extends Controller
 
     //update phrase
     public function updatePhrase(Request $request,$code){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -169,7 +169,7 @@ class LanguageController extends Controller
     }
     //delete language
     public function delete($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Delete system is disable for the demo mode.'),__('errors'));
             return redirect()->back();
         }

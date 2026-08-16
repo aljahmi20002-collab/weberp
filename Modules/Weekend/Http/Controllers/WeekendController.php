@@ -82,7 +82,7 @@ class WeekendController extends Controller
 
     public function update(UpdateRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -98,7 +98,7 @@ class WeekendController extends Controller
 
     public function statusUpdate($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }

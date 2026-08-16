@@ -1,4 +1,4 @@
-<div role="tabpanel" class="tab-pane " id="purchase-code-tab">
+<div role="tabpanel" class="tab-pane " id="pre-installation-tab">
     <div class="scroll-box">
         <h3 class="title">Pre-Installation</h3>
         <div class="section mt-2">

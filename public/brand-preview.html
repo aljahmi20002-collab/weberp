@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>WebERP / WebPOS — Brand Preview</title>
+<link rel="icon" href="img/brand/icon.svg">
+<link rel="stylesheet" href="css/brand.css">
+<style>
+  body { margin: 0; background: linear-gradient(135deg,#EEF2FF 0%,#F5F3FF 100%); color: var(--brand-ink); }
+  .page { max-width: 1100px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1 { font-size: 38px; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 22px; margin: 48px 0 16px; }
+  .sub { color: var(--brand-muted); font-size: 16px; margin-bottom: 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 20px; }
+  .card {
+    background: #fff; border-radius: 18px; padding: 28px;
+    box-shadow: var(--brand-shadow-soft); border: 1px solid var(--brand-border);
+  }
+  .card.dark { background: linear-gradient(180deg,#0F172A,#1E1B4B); color: #fff; border: 0; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--brand-muted); margin-bottom: 14px; }
+  .card.dark .label { color: #C7D2FE; }
+  .swatches { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+  .sw {
+    width: 64px; height: 64px; border-radius: 14px;
+    display: flex; align-items: flex-end; justify-content: center; padding: 6px;
+    color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .04em;
+    box-shadow: var(--brand-shadow-soft);
+  }
+  .sw.dark { color:#0F172A; }
+  .icon-lg { width: 96px; height: 96px; }
+  .row { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  .logo-lg { height: 60px; }
+  .hero {
+    border-radius: 22px; overflow: hidden; position: relative;
+    background: var(--brand-gradient); padding: 40px; color:#fff;
+    display:flex; align-items:center; gap:32px;
+    box-shadow: 0 30px 80px -20px rgba(79,70,229,.35);
+  }
+  .hero img { height: 180px; border-radius: 16px; background:#fff; }
+  .hero h1 { color:#fff; }
+  .hero p { color: #E0E7FF; margin: 8px 0 18px; }
+  .tag { display:inline-block; padding:4px 12px; border-radius:999px; background: rgba(255,255,255,.15); font-size: 12px; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <h1>WebERP / WebPOS — Brand Identity</h1>
+    <div class="sub">شعار وهوية بصرية جديدة كاملة لتطبيق WebERP / WebPOS</div>
+
+    <div class="hero">
+      <div>
+        <span class="tag">NEW BRAND</span>
+        <h1>WebERP / WebPOS</h1>
+        <p>Business Management &amp; Point of Sale — لون هندي-بنفسجي احترافي، خط Inter، أيقونة مصممة خصيصاً.</p>
+        <button class="btn-brand">Get Started</button>
+      </div>
+      <img src="img/brand/logo-primary.png" alt="WebERP logo">
+    </div>
+
+    <h2>Logos — الشعارات</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="label">Primary (SVG)</div>
+        <img src="img/brand/logo.svg" class="logo-lg" alt="WebERP primary logo">
+      </div>
+      <div class="card dark">
+        <div class="label">For Dark Backgrounds</div>
+        <img src="img/brand/logo-white.svg" class="logo-lg" alt="WebERP white logo">
+      </div>
+      <div class="card">
+        <div class="label">POS Variant</div>
+        <img src="img/brand/logo-pos.svg" class="logo-lg" alt="WebPOS logo">
+      </div>
+      <div class="card">
+        <div class="label">App Icon</div>
+        <img src="img/brand/icon.svg" class="icon-lg" alt="WebERP icon">
+      </div>
+    </div>
+
+    <h2>Colors — الألوان</h2>
+    <div class="card">
+      <div class="label">Brand palette</div>
+      <div class="swatches">
+        <div class="sw" style="background:#4F46E5">#4F46E5</div>
+        <div class="sw" style="background:#7C3AED">#7C3AED</div>
+        <div class="sw dark" style="background:#C7D2FE">#C7D2FE</div>
+        <div class="sw" style="background:#14B8A6">#14B8A6</div>
+        <div class="sw" style="background:#F59E0B">#F59E0B</div>
+        <div class="sw" style="background:#10B981">#10B981</div>
+        <div class="sw" style="background:#EF4444">#EF4444</div>
+        <div class="sw dark" style="background:#F8FAFC; border:1px solid #E2E8F0;">#F8FAFC</div>
+        <div class="sw dark" style="background:#F1F5F9">#F1F5F9</div>
+        <div class="sw" style="background:#64748B">#64748B</div>
+        <div class="sw" style="background:#1E293B">#1E293B</div>
+        <div class="sw" style="background:#0F172A">#0F172A</div>
+      </div>
+    </div>
+
+    <h2>Social / Login — صور الصفحات</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="label">Open Graph (1200×630)</div>
+        <img src="img/brand/og-image.png" style="width:100%; border-radius:12px;" alt="OG image">
+      </div>
+      <div class="card">
+        <div class="label">Login Hero</div>
+        <img src="img/brand/login-hero.png" style="width:100%; border-radius:12px;" alt="Login hero">
+      </div>
+    </div>
+
+    <h2>Buttons — الأزرار</h2>
+    <div class="card row">
+      <button class="btn-brand">Primary Button</button>
+      <button class="btn-brand-outline">Outline Button</button>
+      <button class="btn-brand" disabled style="opacity:.5;cursor:not-allowed">Disabled</button>
+    </div>
+
+    <h2>Files generated</h2>
+    <div class="card">
+      <ul style="line-height:1.9; padding-left:18px; margin:0;">
+        <li><code>public/img/brand/logo.svg</code> — الشعار الأساسي (vector)</li>
+        <li><code>public/img/brand/logo-primary.png</code> — الشعار PNG عالي الجودة</li>
+        <li><code>public/img/brand/logo-white.svg/.png</code> — الشعار الأبيض للخلفيات الداكنة</li>
+        <li><code>public/img/brand/logo-pos.svg/.png</code> — شعار WebPOS</li>
+        <li><code>public/img/brand/icon.svg/.png</code> — أيقونة التطبيق (App Icon)</li>
+        <li><code>public/img/brand/favicon.png</code> — أيقونة المتصفح</li>
+        <li><code>public/img/brand/og-image.png</code> — صورة المشاركة الاجتماعية</li>
+        <li><code>public/img/brand/login-hero.png</code> — صورة صفحة الدخول</li>
+        <li><code>public/img/brand/site.webmanifest</code> — PWA manifest</li>
+        <li><code>public/css/brand.css</code> — ملف ألوان وخطوط الهوية</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

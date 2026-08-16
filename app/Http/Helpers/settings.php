@@ -43,7 +43,8 @@ if(!function_exists('logo')){
         if($logo && File::exists(public_path($logo->original))):
             return static_asset($logo->original);
         endif;
-        return static_asset('logo.png');
+        // Fallback to the new brand logo (SVG for crisp rendering)
+        return static_asset('img/brand/logo.svg');
     }
 }
 //end logo
@@ -56,7 +57,7 @@ if(!function_exists('favicon')){
         if($favicon && File::exists(public_path($favicon->original))):
             return static_asset($favicon->original);
         endif;
-        return static_asset('favicon.png');
+        return static_asset('img/brand/icon.svg');
     }
 }
 //end favicon

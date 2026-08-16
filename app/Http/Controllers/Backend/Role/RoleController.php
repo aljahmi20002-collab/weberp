@@ -74,7 +74,7 @@ class RoleController extends Controller
     }
     //store
     public function store(StoreRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -95,7 +95,7 @@ class RoleController extends Controller
     }
 
     public function update(UpdateRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -109,7 +109,7 @@ class RoleController extends Controller
     }
     //delete
     public function delete($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Delete system is disable for the demo mode.'),__('errors'));
             return redirect()->back();
         }

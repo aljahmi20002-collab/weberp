@@ -218,7 +218,7 @@ class UserController extends Controller
                 return redirect()->route('business.subscription.index');//subscription page
             endif; 
         endif;
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -252,7 +252,7 @@ class UserController extends Controller
     //update user
     public function update(UpdateRequest $request){
 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -268,7 +268,7 @@ class UserController extends Controller
 
     //delete user
     public function delete($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Delete system is disable for the demo mode.'),__('errors'));
             return redirect()->back();
         }

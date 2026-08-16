@@ -103,7 +103,7 @@ class ProjectController extends Controller
     public function store(StoreRequest $request)
     {
 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -150,7 +150,7 @@ class ProjectController extends Controller
      */
     public function update(StoreRequest $request, $id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -171,7 +171,7 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Delete system is disable for the demo mode.'),__('errors'));
             return redirect()->back();
         }

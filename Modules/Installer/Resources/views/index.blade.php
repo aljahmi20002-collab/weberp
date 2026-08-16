@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width,  minimum-scale=0.8, maximum-scale = 0.8, user-scalable = no , shrink-to-fit=no">
-    <link rel="shortcut icon" href=" {{ static_asset('favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ static_asset('img/brand/icon.svg') }}" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="{{ static_asset('img/brand/favicon.png') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ static_asset('backend/assets') }}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ static_asset('backend') }}/installer/custom_two.css">
@@ -14,7 +15,31 @@
     <link rel="stylesheet" href="{{ static_asset('backend/assets') }}/css/all.min.css">
     <link rel="stylesheet" href="{{ static_asset('backend') }}/installer/progressbar.css">
     <link rel='stylesheet' type='text/css' href="{{ static_asset('backend/installer/styleone.css') }}" />
-    <title>WeERP - Business or company management solution with POS (SaaS)</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap">
+    <title>WebERP / WebPOS — Business Management with POS (SaaS)</title>
+    <style>
+      body { font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif; background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%); min-height: 100vh; }
+      .installer-container { padding: 32px 0; }
+      .installer { background: #fff; border-radius: 22px; box-shadow: 0 30px 80px -20px rgba(79,70,229,.25); overflow: hidden; max-width: 880px; margin: 0 auto; }
+      .installer-header-box { background: #fff; }
+      .panel-heading { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); padding: 36px 24px !important; border-radius: 0; }
+      .panel-heading h2 { color: #fff; font-weight: 700; margin: 4px 0; }
+      .panel-heading h2:first-child { font-size: 26px; letter-spacing: -0.02em; }
+      .panel-heading h2:last-child  { font-size: 15px; font-weight: 500; opacity: 0.92; line-height: 1.6; }
+      .panel-heading::before {
+        content: ''; display: block; margin: 0 auto 18px; width: 72px; height: 72px;
+        background: rgba(255,255,255,.15) url("{{ static_asset('img/brand/icon.svg') }}") center/44px no-repeat;
+        border-radius: 16px;
+      }
+      .form-control { border-radius: 10px; border: 1px solid #E2E8F0; padding: 10px 14px; box-shadow: none !important; }
+      .form-control:focus { border-color: #4F46E5; box-shadow: 0 0 0 3px rgba(79,70,229,.12) !important; }
+      .btn-primary, button[type=submit] { background: linear-gradient(135deg, #4F46E5, #7C3AED); border: 0; padding: 10px 24px; border-radius: 10px; font-weight: 600; box-shadow: 0 10px 25px -8px rgba(79,70,229,.45); }
+      .title { font-weight: 700; color: #0F172A; }
+      .section p { color: #64748B; }
+      .text-danger, #error_m { background: #FEF2F2; color: #991B1B; border-radius: 10px; padding: 12px 16px; }
+      #progressbar li { background: #CBD5E1; }
+      #progressbar li.active { background: linear-gradient(135deg, #4F46E5, #7C3AED); }
+    </style>
 </head>
 
 <body>
@@ -104,8 +129,8 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="panel-heading text-center p-5">
-                                                <h2>Welcome To WeERP</h2>
-                                                <h2>WeERP - Business or company management solution with POS (SaaS) Laravel
+                                                <h2>Welcome To WebERP / WebPOS</h2>
+                                                <h2>WebERP / WebPOS — Business & Company Management Solution with POS (SaaS) Laravel
                                                     Script Installation</h2>
                                             </div>
                                         </div>

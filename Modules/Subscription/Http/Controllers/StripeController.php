@@ -17,7 +17,7 @@ class StripeController extends Controller
     }
     public function StripePayment(Request $request)
     { 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('payment_system_is_disable_for_the_demo_mode'),__('errors'));
             return response()->json(['success'=>false],400);
         }

@@ -282,7 +282,7 @@ class BusinessSettingsController extends Controller
             Toastr::error(__('error'),__('errors'));
             return redirect()->back();
         endif;
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }

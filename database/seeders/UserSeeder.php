@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 class UserSeeder extends Seeder
 {
@@ -20,25 +21,35 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create();
 
+        // Strong, random demo passwords generated once per seed run.
+        // In production you should change / delete these demo accounts after
+        // installation. The Superadmin (id=1) account is overwritten by the
+        // installer's finish() step with the password entered during setup.
+        $adminPass    = Hash::make(Str::random(20));
+        $businessPass = Hash::make(Str::random(20));
+        $branchPass   = Hash::make(Str::random(20));
+        $employeePass = Hash::make(Str::random(20));
+        $elitePass    = Hash::make(Str::random(20));
+
         $user                = new User();
         $user->name          = 'Admin';
-        $user->email         = 'admin@wemaxdevs.com';
+        $user->email         = 'admin@weberp.app';
         $user->role_id       =  1;
         $user->phone         = '01820000000';
         $user->user_type     = UserType::SUPERADMIN;
         $user->permissions   = $this->superadminPermissions();
-        $user->password      = Hash::make(123456);
+        $user->password      = $adminPass;
         $user->email_verified=  1;
         $user->save();
 
         $user                = new User();
         $user->name          = 'Business';
-        $user->email         = 'business@wemaxdevs.com';
+        $user->email         = 'business@weberp.app';
         $user->role_id       =  2;
         $user->phone         = '01820000000';
         $user->user_type     = UserType::ADMIN;
         $user->permissions   = $this->adminPermissions();
-        $user->password      = Hash::make(123456);
+        $user->password      = $businessPass;
         $user->business_owner= 1;
         $user->email_verified= 1;
         $user->save();
@@ -47,36 +58,38 @@ class UserSeeder extends Seeder
         $user->business_id   = 1;
         $user->branch_id     = 1;
         $user->name          = 'Branch';
-        $user->email         = 'branch@wemaxdevs.com';
+        $user->email         = 'branch@weberp.app';
         $user->role_id       =  3;
         $user->phone         = '0182000000';
         $user->user_type     = UserType::USER;
         $user->permissions   = $this->employeePermissions();
-        $user->password      = Hash::make(123456);
+        $user->password      = $branchPass;
         $user->email_verified=  1;
         $user->save();
 
 
         $user                = new User();
+        $user->business_id   = 1;
+        $user->branch_id     = 1;
         $user->name          = 'employee';
-        $user->email         = 'employee@wemaxdevs.com';
-        $user->role_id       =  1;
+        $user->email         = 'employee@weberp.app';
+        $user->role_id       =  3;
         $user->phone         = '01820000000';
-        $user->user_type     = UserType::SUPERADMIN;
-        $user->permissions   = $this->userPermissions();
-        $user->password      = Hash::make(123456);
+        $user->user_type     = UserType::USER;
+        $user->permissions   = $this->employeePermissions();
+        $user->password      = $employeePass;
         $user->email_verified=  1;
         $user->save();
 
 
         $user                = new User();
         $user->name          = 'Elite Group';
-        $user->email         = 'elitegroup@wemaxdevs.com';
+        $user->email         = 'elitegroup@weberp.app';
         $user->role_id       =  2;
         $user->phone         = '01820000000';
         $user->user_type     = UserType::ADMIN;
         $user->permissions   = $this->adminPermissions();
-        $user->password      = Hash::make(123456);
+        $user->password      = $elitePass;
         $user->business_owner= 1;
         $user->email_verified= 1;
         $user->save();
@@ -86,12 +99,12 @@ class UserSeeder extends Seeder
             $user->business_id   = 1;
             $user->branch_id     = 1;
             $user->name          = $faker->name;
-            $user->email         = $faker->email;
+            $user->email         = $faker->unique()->email;
             $user->role_id       =  3;
             $user->phone         = $faker->phoneNumber;
             $user->user_type     = UserType::USER;
             $user->permissions   = $this->employeePermissions();
-            $user->password      = Hash::make(123456);
+            $user->password      = Hash::make(Str::random(16));
             $user->email_verified=  1;
             $user->save();
         }
@@ -102,17 +115,15 @@ class UserSeeder extends Seeder
             $user->business_id   = 1;
             $user->branch_id     = 2;
             $user->name          = $faker->name;
-            $user->email         = $faker->email;
+            $user->email         = $faker->unique()->email;
             $user->role_id       =  3;
             $user->phone         = $faker->phoneNumber;
             $user->user_type     = UserType::USER;
             $user->permissions   = $this->employeePermissions();
-            $user->password      = Hash::make(123456);
+            $user->password      = Hash::make(Str::random(16));
             $user->email_verified=  1;
             $user->save();
         }
-
-
     }
 
 

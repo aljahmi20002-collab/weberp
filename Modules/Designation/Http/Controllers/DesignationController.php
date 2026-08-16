@@ -83,7 +83,7 @@ class DesignationController extends Controller
 
     public function store(StoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -117,7 +117,7 @@ class DesignationController extends Controller
      */
     public function update(StoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -137,7 +137,7 @@ class DesignationController extends Controller
      */
     public function destroy($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -151,7 +151,7 @@ class DesignationController extends Controller
     }
 
     public function statusUpdate($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),);
             return redirect()->back()->withInput();
         }

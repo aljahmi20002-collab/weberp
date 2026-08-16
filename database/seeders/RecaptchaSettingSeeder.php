@@ -11,13 +11,16 @@ class RecaptchaSettingSeeder extends Seeder
     /**
      * Run the database seeds.
      *
+     * ReCaptcha keys are intentionally empty — configure them from the
+     * admin panel (Settings → ReCaptcha) after installation.
+     *
      * @return void
      */
     public function run()
     {
         $recaptcha              = new RecaptchaSetting();
-        $recaptcha->site_key    = '6Lcf3yAhAAAAACWKvubI45IoCx8bXgLpcNAHENQV';
-        $recaptcha->secret_key  = '6Lcf3yAhAAAAABaGgYpPwBSKVSXcfXvamu-G07Y9';
+        $recaptcha->site_key    = '';
+        $recaptcha->secret_key  = '';
         $recaptcha->status      = 0;
         $recaptcha->save();
     }

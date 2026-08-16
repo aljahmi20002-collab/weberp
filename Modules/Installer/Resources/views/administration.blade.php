@@ -32,14 +32,6 @@
                         class="form-control  form--control" placeholder="Login password" />
                 </div>
             </div>
-            <div class=" col-md-12">
-                <div class="form-group  mt-2">
-                    <label for="purchase_code">Purchase code</label>
-                    <input type="purchase_code" value="{{ old('purchase_code') ?? '' }}" name="purchase_code"
-                        class="form-control  form--control" placeholder="Enter purchase code" />
-                </div>
-            </div>
-
         </div>
     </div>
     <div class="d-flex justify-content-between mt-5">

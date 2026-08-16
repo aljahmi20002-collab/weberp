@@ -25,7 +25,7 @@ class BarcodeSettingsController extends Controller
  
     public function store(BarcodeSettingStoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -47,7 +47,7 @@ class BarcodeSettingsController extends Controller
     
     public function update(BarcodeSettingStoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -64,7 +64,7 @@ class BarcodeSettingsController extends Controller
     
     public function delete($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }

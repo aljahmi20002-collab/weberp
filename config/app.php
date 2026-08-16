@@ -16,8 +16,23 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
-    'app_installed'=> env('APP_INSTALLED'),
+    'name' => env('APP_NAME', 'WebERP'),
+    'app_installed' => env('APP_INSTALLED'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Demo Mode
+    |--------------------------------------------------------------------------
+    |
+    | When demo mode is enabled, destructive actions (editing/deleting core
+    | entities, changing admin password, updating settings) are disabled so
+    | that visitors cannot modify a live demo deployment. This is exposed
+    | through `config('app.demo_mode')` instead of reading `env('DEMO')`
+    | directly, because after `config:cache` env() returns null outside of
+    | config files.
+    */
+
+    'demo_mode' => env('DEMO', false),
     /*
     |--------------------------------------------------------------------------
     | Application Environment

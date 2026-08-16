@@ -28,7 +28,7 @@ class ProfileController extends Controller
 
     public function ProfileUpdate(ProfileRequest $request){
 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -44,7 +44,7 @@ class ProfileController extends Controller
     //end profile update
 
     public function ProfileUpdateAccount(ProfileRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -74,7 +74,7 @@ class ProfileController extends Controller
 
 
     public function UpdatePassword(ChangePassword $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }

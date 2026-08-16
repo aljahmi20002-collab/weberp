@@ -120,7 +120,7 @@ class PlanController extends Controller
         return view('plan::create',compact('modules'));
     }
     public function  store (StoreRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -140,7 +140,7 @@ class PlanController extends Controller
         return view('plan::edit',compact('roles','plan','modules'));
     }
     public function update(StoreRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -154,7 +154,7 @@ class PlanController extends Controller
         endif;
     }
     public function  destroy ($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -168,7 +168,7 @@ class PlanController extends Controller
         endif;
     }
     public function  statusUpdate ($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }

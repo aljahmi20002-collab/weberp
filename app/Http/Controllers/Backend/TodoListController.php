@@ -167,7 +167,7 @@ class TodoListController extends Controller {
      */
     public function store(StoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Store system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -191,7 +191,7 @@ class TodoListController extends Controller {
 
     public function update(StoreRequest $request,$id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -213,7 +213,7 @@ class TodoListController extends Controller {
      */
     public function destroy(Request $request,$id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Delete system is disable for the demo mode.'),__('errors'));
             return redirect()->back();
         }
@@ -229,7 +229,7 @@ class TodoListController extends Controller {
 
     public function statusUpdate(Request $request,$id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('Update system is disable for the demo mode.'),__('errors'));
             return redirect()->back()->withInput();
         }

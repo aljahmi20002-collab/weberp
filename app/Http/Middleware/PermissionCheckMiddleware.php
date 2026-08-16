@@ -13,14 +13,24 @@ class PermissionCheckMiddleware
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @param  string|null  $permission
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next,$permission = null)
+    public function handle(Request $request, Closure $next, $permission = null)
     {
-        if(Auth::check() && in_array($permission,Auth::user()->permissions)){
+        if (Auth::check() && in_array($permission, (array) Auth::user()->permissions)) {
             return $next($request);
         }
-        return redirect('/');
-        abort(403);
+
+        // Return JSON 403 for API requests (including /api/* and any ajax call),
+        // otherwise redirect to the home page.
+        if ($request->expectsJson() || $request->is('api/*')) {
+            return response()->json([
+                'success' => false,
+                'message' => 'You do not have permission to perform this action.',
+            ], 403);
+        }
+
+        return redirect('/')->with('error', __('You do not have permission to perform this action.'));
     }
 }

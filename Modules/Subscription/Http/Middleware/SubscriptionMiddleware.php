@@ -18,7 +18,7 @@ class SubscriptionMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(env('DEMO')):
+        if(config('app.demo_mode')):
             return $next($request); 
         endif;
         if(!isSuperadmin()  ):  

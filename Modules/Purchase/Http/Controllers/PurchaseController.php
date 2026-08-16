@@ -147,7 +147,7 @@ class PurchaseController extends Controller
  
     public function store(StoreRequest $request)
     { 
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -176,7 +176,7 @@ class PurchaseController extends Controller
  
     public function update(StoreRequest $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -191,7 +191,7 @@ class PurchaseController extends Controller
     
     public function destroy($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -257,7 +257,7 @@ class PurchaseController extends Controller
     }
 
     public function statusUpdate($id,$status){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -282,7 +282,7 @@ class PurchaseController extends Controller
     }
 
     public function addPayment(AddPaymentRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }
@@ -307,7 +307,7 @@ class PurchaseController extends Controller
         return view('purchase::edit_payment',compact('payment'));
     }
     public function updatePayment(AddPaymentRequest $request){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         } 
@@ -330,7 +330,7 @@ class PurchaseController extends Controller
 
 
     public function deletePayment($id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         }  

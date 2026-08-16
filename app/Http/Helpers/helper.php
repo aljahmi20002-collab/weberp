@@ -337,7 +337,8 @@ if (!function_exists('businessLogo')) {
         ) :
             return static_asset(Auth::user()->userBusiness->upload->original);
         else :
-            return settings('logo');
+            $configured = settings('logo');
+            return $configured ?: static_asset('img/brand/logo-white.svg');
         endif;
     }
 }

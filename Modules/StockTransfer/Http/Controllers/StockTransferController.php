@@ -158,7 +158,7 @@ class StockTransferController extends Controller
             Toastr::error(__('out_of_stock'),__('errors'));
             return redirect()->back()->withInput($request->all());
         endif;
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         } 
@@ -187,7 +187,7 @@ class StockTransferController extends Controller
     
     public function update(Request $request)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('store_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         } 
@@ -203,7 +203,7 @@ class StockTransferController extends Controller
 
     public function destroy($id)
     {
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('delete_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         } 
@@ -217,7 +217,7 @@ class StockTransferController extends Controller
     } 
 
     public function StatusUpdate(Request $request,$id){
-        if(env('DEMO')) {
+        if(config('app.demo_mode')) {
             Toastr::error(__('status_update_system_is_disable_for_the_demo_mode'),__('errors'));
             return redirect()->back()->withInput();
         } 
